@@ -1,6 +1,6 @@
 1.
 git init
-git remote lien
+git remote add origin [lien]
 git add . 
 git commit -m "premier envoie"
 git push
