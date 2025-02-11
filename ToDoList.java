@@ -2,9 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ToDoList{
+	
+	static ArrayList<String> taches = new ArrayList<String>();
+	static ArrayList<Boolean> isDone = new ArrayList<Boolean>();
+	
 	public static void main (String[] args){
-		ArrayList<String> taches = new ArrayList<String>();
-		ArrayList<Boolean> isDone = new ArrayList<Boolean>();
 		Scanner scanner = new Scanner(System.in);
 		String choix;
 		
@@ -28,26 +30,29 @@ public class ToDoList{
 				System.out.println();
 			}
 			else if(choix.equals("2")){
-				System.out.print("Entrez le numéro de la tâche à narquer comme terminée : ");
+				afficherTaches();
+				System.out.print("Entrez le numéro de la tâche à marquer comme terminée : ");
 				choix = scanner.nextLine();
 				isDone.set(Integer.parseInt(choix) - 1, true);
 				System.out.printf("Tâche terminée : %s\n", taches.get(Integer.parseInt(choix) - 1));
 			}
 			else if(choix.equals("3")){
-				for(int i = 0; i < taches.size(); i++){
-					System.out.printf("")
-				}
+				afficherTaches();
 			}
 			else if(choix.equals("4")){
 				System.out.println("Tâches :");
-				System.out.println();
-				for(int i = 0; i <= taches.size(); i++){
-					int j = i+j;
-					System.out.println(j +": "+ taches.get(i));
-				}
+				afficherTaches();
 				System.out.println("Merci d'avoir utilisé le gestionnaire de tâches!");
 				break;
 			}
+			else{
+				System.out.println("Ceci n'est pas un choix valide.");
+				System.out.println();
+			}
 		}
+	}
+	
+	public static void afficherTaches(){
+		
 	}
 }
