@@ -9,7 +9,7 @@ git push
 git clone www.github.com/etudiant/monprojet.git
 
 3.
-public static void calculatriceScientifique(){
+public class CalculatriceScientifique{
 }
 
 4.
