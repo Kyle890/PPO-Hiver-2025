@@ -35,24 +35,40 @@ public class ToDoList{
 				choix = scanner.nextLine();
 				isDone.set(Integer.parseInt(choix) - 1, true);
 				System.out.printf("Tâche terminée : %s\n", taches.get(Integer.parseInt(choix) - 1));
+				System.out.println("-".repeat(60));
+				System.out.println();
 			}
 			else if(choix.equals("3")){
 				afficherTaches();
+				System.out.println("-".repeat(60));
+				System.out.println();
 			}
 			else if(choix.equals("4")){
 				System.out.println("Tâches :");
 				afficherTaches();
 				System.out.println("Merci d'avoir utilisé le gestionnaire de tâches!");
+				System.out.println("-".repeat(60));
+				System.out.println();
 				break;
 			}
 			else{
 				System.out.println("Ceci n'est pas un choix valide.");
+				System.out.println("-".repeat(60));
 				System.out.println();
 			}
 		}
 	}
 	
 	public static void afficherTaches(){
-		
+		for(int i = 0; i < taches.size(); i++){
+			if(isDone.get(i)){
+				System.out.println((i+1) + " : " + taches.get(i) + (" (Tâche terminée)"));
+				System.out.println();
+			}
+			else{
+				System.out.println((i+1) + " : " + taches.get(i));
+				System.out.println();
+			}
+		}
 	}
 }
