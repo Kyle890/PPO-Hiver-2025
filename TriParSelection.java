@@ -24,9 +24,11 @@ public class TriParSelection{
                     minIndex = j;
                 }
             }
-            int temp = tableau[i];
-            tableau[i] = tableau[minIndex];
-            tableau[minIndex] = temp;
+	    if (minIndex != i){
+		int temp = tableau[i];
+            	tableau[i] = tableau[minIndex];
+            	tableau[minIndex] = temp;    
+	    }
         }
 		
         System.out.print("Tableau après le tri : [");
