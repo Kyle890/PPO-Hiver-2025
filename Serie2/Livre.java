@@ -30,4 +30,15 @@ public class Livre {
             System.out.println("Livre n'est pas disponible");
         }
     }
+
+    public void retourner(){
+        this.estDisponible = true;
+    }
+
+    public static void main(String[] args) {
+        Livre livre1 = new Livre(null, null, 0, false);
+        Livre livre2 = new Livre(null, null, 0, false);
+        Livre livre3 = new Livre(null, null, 0, false);
+        Livre livre4 = new Livre(null, null, 0, false);
+    }
 }
