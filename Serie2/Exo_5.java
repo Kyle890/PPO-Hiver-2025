@@ -1,8 +1,8 @@
-public class Etudiant{
+public class Exo_5{
     String nom;
     int age;
 
-    public Etudiant(String nom, int age){
+    public Exo_5(String nom, int age){
         this.nom = nom;
         this.age = age;
     }
@@ -16,8 +16,8 @@ public class Etudiant{
     }
 
     public static void main (String[] args){
-        Etudiant Kersen = new Etudiant("Kersen", 17);
-        Etudiant Yassine = new Etudiant("Yassine", 35);
+        Exo_5 Kersen = new Exo_5("Kersen", 17);
+        Exo_5 Yassine = new Exo_5("Yassine", 35);
         Kersen.afficherInfo();
         Yassine.afficherInfo();
     }
