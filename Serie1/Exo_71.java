@@ -21,9 +21,9 @@ public class Exo_71{
 			
 			switch(choix) {
 				case 1:
-					for(int i = 0 ; i < plats.length ; i++){
-                    String prixFormatter = String.format("%.02f$", prix[i]);
-                    System.out.println((i+1) + ". " + plats[i] + " ".repeat(24 - plats[i].length() - prixFormatter.length()) + prixFormatter);
+					for(int i = 0 ; i < plat.length ; i++){
+                    String prixFormatter = String.format("%.02f$", prixPlat[i]);
+                    System.out.println((i+1) + ". " + plat[i] + " ".repeat(24 - plat[i].length() - prixFormatter.length()) + prixFormatter);
 					}
 					System.out.println();
 					System.out.println("Entrez le numéro de l'item : ");
