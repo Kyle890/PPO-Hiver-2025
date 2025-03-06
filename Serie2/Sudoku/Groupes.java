@@ -28,7 +28,39 @@ public class Groupes {
         return msg;
     }
 
-    public void findAndSetPlaceableCase(){
+    public int findAndSetPlaceableCase(){
+        // case 1
+        for(int val = 1; val < 10; val++){
+            if(this.valeurPossibles[val -1]){
+                for(int i = 0; i < 9; i++){
+                    if(this.cases[0].isLastPossible(val)){
+                        this.cases[0].setValue(val);
+                        return val-1;
+                    }
+                }
+            }         
+        }
+        int nbPoss;
+        int idx;
+        //case 2
+        for(int val = 1; val < 10; val++){
+            if(this.valeurPossibles[val -1]){
+                // Je veux regarder toutes les cases de mon groupe
+                // Si 5 ne peut être place qu'à un seul endroit je le place
+                nbPoss = 0;
+                idx = -1;
+                for(int i = 0; i < 9; i++){
+                    if(this.cases[i].valeurPossibles[val -1]){
+                        nbPoss++;
+                        idx = i;
+                    }
+                }
+                if(nbPoss == 1){
+                    this.cases[idx].setValue(val);
+                    return idx;
+                }
+            }
+        }
 
     }
 
