@@ -19,33 +19,38 @@ public class Exo016{
             System.out.println("Vous avez choisi : " + choix);
             System.out.println("Appuyer sur enter pour continuer");
             System.out.println("");
-            if(choix.equals("1")){
-                for(int i = 0 ; i < plats.length ; i++){
-                    String prixFormatter = String.format("%.02f$", prix[i]);
-                    System.out.println((i+1) + ". " + plats[i] + 
-                        " ".repeat(24 - plats[i].length() - prixFormatter.length()) + prixFormatter);
+
+            try {
+                if(choix.equals("1")){
+                    for(int i = 0 ; i < plats.length ; i++){
+                        String prixFormatter = String.format("%.02f$", prix[i]);
+                        //System.out.println((i+1) + ". " + plats[i] + 
+                            //" ".repeat(24 - plats[i].length() - prixFormatter.length()) + prixFormatter);
+                    }
+
+                    System.out.print("Entrez le numéro de l'item : ");
+                    choix = scanner.nextLine();
+                    facture.add(plats[Integer.parseInt(choix) - 1]);
                 }
+                else if(choix.equals("2")){
+                    
+                    afficherReçu(facture, prix);
 
-                System.out.print("Entrez le numéro de l'item : ");
-                choix = scanner.nextLine();
-                facture.add(plats[Integer.parseInt(choix) - 1]);
+                    System.out.print("Quel item voulez-vous retirer : ");
+                    choix = scanner.nextLine();
+                    facture.remove(Integer.parseInt(choix));
+                }
+                else if(choix.equals("3")){
+                    afficherReçu(facture, prix);
+                }
+                else if(choix.equals("4")){
+                    afficherReçu(facture, prix);
+                    System.out.println();
+                    System.out.println("Merci pour votre visite!");
+                    break;
             }
-            else if(choix.equals("2")){
-                
-                afficherReçu(facture, prix);
-
-                System.out.print("Quel item voulez-vous retirer : ");
-                choix = scanner.nextLine();
-                facture.remove(Integer.parseInt(choix));
-            }
-            else if(choix.equals("3")){
-                afficherReçu(facture, prix);
-            }
-            else if(choix.equals("4")){
-                afficherReçu(facture, prix);
-                System.out.println();
-                System.out.println("Merci pour votre visite!");
-                break;
+            } catch (Exception e) {
+                // TODO: handle exception
             }
             scanner.nextLine();
       
