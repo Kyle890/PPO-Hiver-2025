@@ -11,6 +11,6 @@ public class Chat extends Animal {
     }
 
     public String sePresenter(){
-        return String.format("Je suis un %s, mon nom est %s j'ai %d ans " + parler(), this.getrace(), this.getNom(), this.getAge());
+        return String.format("Je suis un %s, mon nom est %s j'ai %d ans " + parler(), this.getRace(), this.getNom(), this.getAge());
     }
 }

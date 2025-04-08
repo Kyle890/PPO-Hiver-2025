@@ -1,12 +1,11 @@
 package question1;
-import java.io.*;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
-import java.util.List;
-import java.util.Collections;
 
-public class Groupe {
+public class Main {
     public static void main(String[] args) {
         Random random = new Random(1);
 
@@ -59,36 +58,4 @@ public class Groupe {
         groupe4.afficheResultats();
         
     }   
-}
-class Groupe{
-    private String nomCours;
-    private ArrayList<Etudiant> etudiants;
-
-    public Groupe(String nomCours, ArrayList<Etudiant> etudiants ){
-        this.setNomCours(nomCours);
-        this.etudiants = etudiants;
-    }
-
-    public void setNomCours(String nomCours){
-        return this.nomCours = nomCours;
-    }
-
-    public Etudiant getEtudiant(int index){
-        return etudiants.get(index);
-    }
-
-    public int nbEtudiants(){
-        return etudiants.size();
-    }
-
-    public void afficheResultats(){
-        for(int i = 0 ; i < this.etudiants.size() ; i++){
-            this.etudiants.get(i).afficheResultat();
-        }
-    }
-
-    public void trierParNote(){
-       
-    }
-    
 }

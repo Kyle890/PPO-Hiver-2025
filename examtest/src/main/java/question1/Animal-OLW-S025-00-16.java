@@ -31,7 +31,7 @@ public abstract class Animal {
         this.race = race;
     }
 
-    public String getrace(){
+    public String getRace(){
         return this.race;
     }
 
