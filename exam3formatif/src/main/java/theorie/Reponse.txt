@@ -1,0 +1,33 @@
+Question 1
+INCONNU_1: addFirst 
+INCONNU_2: getElementFromStart 
+INCONNU_3: printForward 
+INCONNU_4: addLast 
+INCONNU_5: trier 
+INCONNU_6: echange
+INCONNU_7: toArray
+
+Question 2
+J'enseigne la matière Mathématiques, salaire: 2500.00
+Je suis Mr. Dupont, j'ai 45 ans et mon adresse est 12 avenue des Champs
+
+Question 3
+a: Classe
+b: aucune de ces réponses
+c: Interface
+d: Classe abstraite et Interface
+e: Interface
+f: Classe et Classe abstraite
+
+Question 4
+a: Enum Dimensions 
+b: this.dimensions = dimensions;
+c: Triangle devrait extend Forme
+d: Cercle devrait extend Forme
+e: Classe Forme devrait être abstraite
+f: La classe Cercle devrait avoir le super pour gèrer la classe parent
+
+Question 5
+
+Methode dans Article : imprimerEtiquette est une surcharge et calculPrixEnGroupe est une surcharge
+Methode dans Jeu : Les 2 imprimerEtiquette est une redéfinitions
